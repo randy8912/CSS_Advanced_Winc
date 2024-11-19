@@ -1,0 +1,12 @@
+I structured the HTML with semantic tags for clarity and accessibility, creating sections like a hero banner, services, 
+GitHub projects, testimonials, LinkedIn preview, and footer. A CSS reset ensures consistency, while custom variables manage colors and text sizes. 
+
+The navigation bar is responsive, with a gradient background for larger screens and a burger menu for screens under 500px, implemented with Flexbox and media queries. 
+
+The services section uses Flexbox for centering, proper spacing, and hover effects for interactivity. The GitHub portfolio showcases repositories in 
+a responsive grid, dynamically linking to key projects. 
+
+Testimonials were redesigned with card layouts and hover animations for consistency. The LinkedIn section features a responsive card with a profile preview and a 
+styled call-to-action button. 
+
+Finally, the footer uses vibrant colors for standout links on a dark background while aligning with the site’s overall structure and branding.

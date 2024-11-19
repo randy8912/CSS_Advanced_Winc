@@ -1,0 +1,325 @@
+/* Reset */
+* {
+    margin: 0; /* Reset margin for all elements */
+    padding: 0; /* Reset padding for all elements */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Set font for the body */
+    color: #333; /* Default text color */
+    background-color: #f0f0f5; /* Light background color for the body */
+    line-height: 1.6; /* Improve readability with line height */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Header section */
+header {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); /* Gradient background for header */
+    color: #fff; /* White text color for contrast */
+    padding: 3rem 2rem; /* Padding for header */
+    text-align: center; /* Center text in header */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect for depth */
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex; /* Flexbox for navigation layout */
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Center items vertically */
+    padding: 1rem 2rem; /* Padding for navbar */
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); /* Gradient background for navbar */
+    color: white; /* White text color */
+    position: relative; /* Positioning context for child elements */
+}
+
+.logo {
+    font-size: 1.5rem; /* Logo font size */
+    font-weight: bold; /* Bold font for logo */
+}
+
+.nav-links {
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Flexbox for horizontal layout */
+    gap: 1.5rem; /* Space between links */
+}
+
+.nav-links li a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: 600; /* Semi-bold font for links */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.nav-links li a:hover {
+    color: #ffde03; /* Change color on hover */
+}
+
+/* Burger Menu */
+.burger {
+    display: none; /* Hidden by default, shown on mobile */
+    flex-direction: column; /* Stack lines vertically */
+    gap: 0.4rem; /* Space between lines */
+    cursor: pointer; /* Pointer cursor for interactivity */
+}
+
+.burger .line {
+    width: 25px; /* Width of burger lines */
+    height: 3px; /* Height of burger lines */
+    background-color: white; /* Color of burger lines */
+    transition: all 0.3s ease; /* Smooth transition for animations */
+}
+
+/* Responsive Styling */
+@media (max-width: 500px) {
+    .nav-links {
+        display: none; /* Hide links by default on mobile */
+        flex-direction: column; /* Stack links vertically */
+        background-color: #333; /* Dark background for dropdown */
+        position: absolute; /* Position dropdown */
+        top: 100%; /* Position below navbar */
+        right: 0; /* Align to the right */
+        width: 100%; /* Full width */
+        padding: 1rem 0; /* Padding for dropdown */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    .burger {
+        display: flex; /* Show burger menu on mobile */
+    }
+
+    .services .grid {
+        flex-direction: column; /* Stack service cards vertically on mobile */
+        gap: 1.5rem; /* Space between cards */
+    }
+
+    .linkedin-card {
+        flex-direction: column; /* Stack LinkedIn card elements vertically */
+        gap: 1rem; /* Space between elements */
+    }
+
+    .linkedin-card img {
+        width: 100px; /* Fixed width for LinkedIn image */
+        height: 100px; /* Fixed height for LinkedIn image */
+    }
+}
+
+/* Services section */
+.services {
+    padding: 4rem 2rem; /* Padding for services section */
+    text-align: center; /* Center text in services section */
+    background-color: #f5f8ff; /* Light background for services */
+}
+
+.services h2 {
+    font-size: 2.5rem; /* Heading size for services */
+    color: #2575fc; /* Color for services heading */
+    margin-bottom: 2rem; /* Space below heading */
+    text-transform: uppercase; /* Uppercase text for emphasis */
+}
+
+.grid {
+    display: flex; /* Flexbox for grid layout */
+    flex-wrap: wrap; /* Allow wrapping of items */
+    justify-content: center; /* Center aligns the grid items */
+    gap: 2rem; /* Adds space between the items */
+}
+
+.service {
+    background-color: #fff; /* White background for service cards */
+    border-radius: 10px; /* Rounded corners for cards */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    padding: 2rem; /* Padding for service cards */
+    width: 300px; /* Fixed width for uniformity */
+    text-align: center; /* Center content inside each service card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.service:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.service h3 {
+    font-size: 1.8rem; /* Heading size for service */
+    color: #6a11cb; /* Color for service heading */
+    margin-bottom: 1rem; /* Space below heading */
+}
+
+.service p {
+    font-size: 1rem; /* Font size for service description */
+    color: #666; /* Color for service description */
+}
+
+/* GitHub Projects */
+.github-projects {
+    padding: 4rem 2rem; /* Padding for GitHub projects section */
+    background-color: #f5f8ff; /* Light background for projects */
+}
+
+.github-projects h2 {
+    text-align: center; /* Center heading for projects */
+    font-size: 2.5rem; /* Heading size for projects */
+    margin-bottom: 2rem; /* Space below heading */
+    color: #2575fc; /* Color for projects heading */
+}
+
+.projects-grid {
+    display: grid; /* Grid layout for projects */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid columns */
+    gap: 2rem; /* Space between project items */
+}
+
+.project {
+    background-color: #fff; /* White background for project cards */
+    padding: 1.5rem; /* Padding for project cards */
+    border-radius: 8px; /* Rounded corners for project cards */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    text-align: center; /* Center content inside project cards */
+}
+
+.project h3 {
+    font-size: 1.5rem; /* Heading size for project */
+    color: #6a11cb; /* Color for project heading */
+}
+
+.project p {
+    font-size: 1rem; /* Font size for project description */
+    color: #666; /* Color for project description */
+    margin-bottom: 1rem; /* Space below description */
+}
+
+.project a {
+    text-decoration: none; /* Remove underline from links */
+    color: #ff416c; /* Color for project links */
+    font-weight: bold; /* Bold font for links */
+}
+
+.project a:hover {
+    text-decoration: underline; /* Underline on hover for links */
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 5rem 2rem; /* Padding for testimonials section */
+    background-color: #f9f9f9; /* Light background for testimonials */
+}
+
+.testimonials h2 {
+    text-align: center; /* Center heading for testimonials */
+    font-size: 2.8rem; /* Heading size for testimonials */
+    color: #ff416c; /* Color for testimonials heading */
+    margin-bottom: 2rem; /* Space below heading */
+}
+
+.testimonial-grid {
+    display: flex; /* Flexbox for testimonial layout */
+    gap: 2rem; /* Space between testimonials */
+    justify-content: center; /* Center aligns the testimonials */
+    flex-wrap: wrap; /* Allow wrapping of items */
+}
+
+.testimonial {
+    padding: 2rem; /* Padding for testimonial cards */
+    background-color: white; /* White background for testimonials */
+    border-radius: 10px; /* Rounded corners for testimonial cards */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    max-width: 300px; /* Max width for testimonial cards */
+    text-align: center; /* Center content inside testimonial cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.testimonial:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.testimonial p {
+    font-size: 1.2rem; /* Font size for testimonial text */
+    color: #555; /* Color for testimonial text */
+}
+
+.testimonial h4 {
+    font-size: 1rem; /* Font size for testimonial author */
+    color: #333; /* Color for testimonial author */
+}
+
+/* LinkedIn Section */
+.linkedin-preview {
+    padding: 5rem 2rem; /* Padding for LinkedIn section */
+    text-align: center; /* Center text in LinkedIn section */
+    background-color: #f5f8ff; /* Light background for LinkedIn */
+}
+
+.linkedin-card {
+    display: flex; /* Flexbox for LinkedIn card layout */
+    align-items: center; /* Center items vertically */
+    gap: 2rem; /* Space between elements */
+    justify-content: center; /* Center aligns the card content */
+    padding: 2rem; /* Padding for LinkedIn card */
+    background-color: white; /* White background for LinkedIn card */
+    border-radius: 10px; /* Rounded corners for LinkedIn card */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    max-width: 800px; /* Max width for LinkedIn card */
+    margin: 0 auto; /* Center the card horizontally */
+}
+
+.linkedin-card img {
+    width: 150px; /* Fixed width for LinkedIn image */
+    height: 150px; /* Fixed height for LinkedIn image */
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Cover the image area */
+}
+
+.linkedin-content h3 {
+    font-size: 1.8rem; /* Heading size for LinkedIn content */
+    margin-bottom: 0.5rem; /* Space below heading */
+    color: #6a11cb; /* Color for LinkedIn heading */
+}
+
+.linkedin-content p {
+    font-size: 1rem; /* Font size for LinkedIn description */
+    margin-bottom: 1rem; /* Space below description */
+    color: #333; /* Color for LinkedIn description */
+}
+
+.linkedin-content a {
+    text-decoration: none; /* Remove underline from links */
+    padding: 0.8rem 1.5rem; /* Padding for LinkedIn button */
+    background-color: #ff416c; /* Background color for LinkedIn button */
+    color: white; /* Text color for LinkedIn button */
+    border-radius: 5px; /* Rounded corners for button */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.linkedin-content a:hover {
+    background-color: #ff4b2b; /* Change background color on hover */
+    transform: translateY(-3px); /* Slight lift effect on hover */
+}
+
+/* Footer */
+footer {
+    padding: 2rem; /* Padding for footer */
+    background-color: #333; /* Dark background for footer */
+    color: #fff; /* White text color for footer */
+    text-align: center; /* Center text in footer */
+}
+
+footer nav a {
+    color: #ffde03; /* Color for footer links */
+    margin: 0 1rem; /* Space between footer links */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: bold; /* Bold font for footer links */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+footer nav a:hover {
+    color: #ff416c; /* Change color on hover */
+}
+
+footer p {
+    font-size: 1rem; /* Font size for footer text */
+}
