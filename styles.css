@@ -5,17 +5,30 @@
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
+:root {
+  --primary-color: #6a11cb; /* Primary color */
+  --secondary-color: #2575fc; /* Secondary color */
+  --text-color: #333; /* Text color */
+  --background-color: #f0f0f5; /* Background color */
+  --highlight-color: #ff416c; /* Highlight color */
+
+  --font-size-heading: 2.5rem; /* Font size for headings */
+  --font-size-body: 1rem; /* Font size for body text */
+  --font-size-small: 0.9rem; /* Font size for small text */
+}
+
+/* Body */
 body {
     font-family: 'Roboto', sans-serif; /* Set font for the body */
-    color: #333; /* Default text color */
-    background-color: #f0f0f5; /* Light background color for the body */
+    color: var(--text-color); /* Use variable for text color */
+    background-color: var(--background-color); /* Use variable for background color */
     line-height: 1.6; /* Improve readability with line height */
     overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 /* Header section */
 header {
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); /* Gradient background for header */
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); /* Use variables for gradient */
     color: #fff; /* White text color for contrast */
     padding: 3rem 2rem; /* Padding for header */
     text-align: center; /* Center text in header */
@@ -111,12 +124,12 @@ header {
 .services {
     padding: 4rem 2rem; /* Padding for services section */
     text-align: center; /* Center text in services section */
-    background-color: #f5f8ff; /* Light background for services */
+    background-color: var(--background-color); /* Use variable for background color */
 }
 
 .services h2 {
-    font-size: 2.5rem; /* Heading size for services */
-    color: #2575fc; /* Color for services heading */
+    font-size: var(--font-size-heading); /* Use variable for heading size */
+    color: var(--primary-color); /* Use variable for heading color */
     margin-bottom: 2rem; /* Space below heading */
     text-transform: uppercase; /* Uppercase text for emphasis */
 }
@@ -124,8 +137,21 @@ header {
 .grid {
     display: flex; /* Flexbox for grid layout */
     flex-wrap: wrap; /* Allow wrapping of items */
-    justify-content: center; /* Center aligns the grid items */
     gap: 2rem; /* Adds space between the items */
+}
+
+/* Mobile-first styling */
+.services .grid {
+    flex-direction: column; /* Stack service cards vertically on mobile */
+    align-items: center; /* Center items */
+}
+
+/* Styles for larger screens */
+@media (min-width: 500px) {
+  .services .grid {
+    flex-direction: row; /* Stack service cards horizontally on larger screens */
+    justify-content: center; /* Center aligns the grid items */
+  }
 }
 
 .service {
